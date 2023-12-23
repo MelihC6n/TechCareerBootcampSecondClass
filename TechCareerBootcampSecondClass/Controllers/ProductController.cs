@@ -9,7 +9,6 @@ namespace TechCareerBootcampSecondClass.Controllers
     public class ProductController : ControllerBase
     {
         List<Product> products;
-        //add 4 products to the list
         public ProductController()
         {
             products = new List<Product>();
@@ -47,7 +46,6 @@ namespace TechCareerBootcampSecondClass.Controllers
             return Ok(product);
         }
 
-        //delete product by id
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
