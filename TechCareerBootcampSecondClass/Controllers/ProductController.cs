@@ -8,7 +8,7 @@ namespace TechCareerBootcampSecondClass.Controllers
     [ApiController]
     public class ProductController : ControllerBase
     {
-        List<Product> products;
+        static List<Product> products;
         public ProductController()
         {
             if (products == null)
