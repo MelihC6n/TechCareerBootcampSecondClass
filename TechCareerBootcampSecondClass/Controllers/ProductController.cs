@@ -11,14 +11,15 @@ namespace TechCareerBootcampSecondClass.Controllers
         List<Product> products;
         public ProductController()
         {
+            if (products == null)
+            {
             products = new List<Product>();
             products.Add(new Product(1, "Sprite", 100,new Category(1,"Drink")));
             products.Add(new Product(2, "Beef", 200,new Category(2,"Meat")));
             products.Add(new Product(3, "Ice Tea", 300,new Category(1,"Drink")));
-            products.Add(new Product(4, "Kitkat", 400,new Category(4,"Chocolate")));
+            products.Add(new Product(4, "Kitkat", 400,new Category(3,"Chocolate")));
+            }
         }
-               
-        Product product1 = new Product(1, "Product1", 100,new Category(1,"a"));
 
 
         [HttpGet]
